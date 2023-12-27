@@ -1,0 +1,84 @@
+body
+{
+    background-color: #212121;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navigation {
+    position: relative;
+    margin: 0 10%;
+  }
+
+.navmenu
+{
+    list-style-type: none;
+    display: flex;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 40px;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+
+li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    background: #000;
+  }
+
+.Heroshot {
+    padding: 20px;
+    display: flex;
+    position: relative;
+  }
+  
+  .Heroshot > div {
+    margin: 0 10px;
+    flex-grow: 1;
+    border-radius: 20px;
+    box-shadow: 10px #ffffff;
+    height: 500px;
+    box-sizing:border-box;
+    -webkit-mask: linear-gradient(#fff, #fff);
+            mask: linear-gradient(#fff, #fff);
+  }
+  
+  .Heroshot > div::before {
+    content: "";
+    position: absolute;
+    z-index:-1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(https://placekitten.com/1280/720) center/cover;
+  }
+  
+  .Heroshot > div > div {
+    height:100%;
+    border:2px solid #000;
+    border-radius: 10px;
+    text-align:center;
+    box-sizing:border-box;
+
+  }
+
+  .Heroshot > div:nth-child(2)
+  {
+    min-width: 300px;
+  }
+
+  @media only screen and (max-width: 600px)
+  {
+    .Heroshot > div:first-child,
+    .Heroshot > div:last-child
+    {
+        display: none;
+    }
+  }
